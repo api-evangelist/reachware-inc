@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/reachware-inc-reachpay-openapi.yml + https://docs.reachware.com
+authentication:
+  style: bearer
+  header: 'Authorization: Bearer {reachToken}'
+  notes: >-
+    Merchant API token obtained via the Reach Pay Partner Portal. Sandbox tokens
+    are issued for the testing phase; production access is granted after
+    integration verification.
+  cross_ref: authentication/reachware-inc-authentication.yml
+client_identification:
+  field: client_id
+  notes: >-
+    Every operation is scoped to a client_id. It is sent in the request body for
+    RequestPayment, Refund, and RequestSaveCard, and as a request header for
+    PaymentDetails.
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency key/header is documented in the Reach Pay API reference.
+    RequestPayment returns a 500 "Payment Submitted before" on duplicate
+    submission rather than replaying a prior result.
+pagination:
+  supported: false
+  notes: No list/collection endpoints are documented.
+versioning:
+  supported: unknown
+  notes: No API versioning scheme is documented.
+error_envelope:
+  shape: flat json
+  fields: [error, message, type, body]
+  cross_ref: errors/reachware-inc-problem-types.yml
+card_handling:
+  pci: >-
+    Reach Pay does not store card data; card entry and tokenization are handled
+    on the payment gateway's hosted pages (card_gateway_url / payment_gateway_url).
+hosted_redirect_flow:
+  notes: >-
+    Payments and card-save flows are hosted-redirect: the API returns a gateway
+    URL the merchant redirects the payer to, then the payer is returned to the
+    merchant's return_url.

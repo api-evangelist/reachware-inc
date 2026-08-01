@@ -1,0 +1,16 @@
+{
+  "provider": "reachware-inc",
+  "sources": [
+    "reachware-inc-cards-api-openapi.yml",
+    "reachware-inc-payments-api-openapi.yml"
+  ],
+  "outputs": [
+    "reachware-inc-cards-api-openapi.yml",
+    "reachware-inc-payments-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

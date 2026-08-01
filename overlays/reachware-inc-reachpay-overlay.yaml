@@ -1,0 +1,17 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Reach Pay
+  version: 1.0.0
+extends: openapi/reachware-inc-reachpay-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-enriched: true
+      x-apievangelist-category: payments
+      x-apievangelist-region: Saudi Arabia
+  - target: $.info
+    update:
+      x-provenance: >-
+        Operations, fields and responses captured from the published Reach Pay
+        API reference at https://docs.reachware.com; not the provider's own
+        machine-readable spec.

@@ -1,25 +1,135 @@
 aid: reachware-inc
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/reachware-inc.png
 name: Reachware Inc.
-description: Reachware Inc. is a company surfaced as a portfolio company of 500-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Reachware is an Integration Platform as a Service (iPaaS) that lets separate
+  SaaS and business systems operate as one connected ecosystem, with 200+
+  prebuilt connectors to systems like NetSuite, QuickBooks, Microsoft Dynamics
+  365, Odoo, SAP, Oracle, Magento, Zid and Qoyod. Alongside the core platform it
+  ships Reach Pay (a payment API for Saudi Arabia payment gateways), Reachware
+  Fatoora (ZATCA e-invoicing), and extension modules for banking, HR, inventory,
+  loyalty and property management. Reach Pay exposes a hosted-redirect REST API
+  for requesting payments, retrieving payment details, refunds and card
+  tokenization. Reachware reports 3,500+ active subscriptions, 300+ customers,
+  100M+ transactions, and is CMMI Level 3 certified. It was surfaced as a
+  portfolio company of 500 Global and profiled by the API Evangelist enrichment
+  pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/reachware-inc/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
-x-tier: stub
+x-tier: profiled
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Payments
+- iPaaS
+- Integration
+- Fintech
+- Payment Gateway
+- Tokenization
+- Saudi Arabia
+apis:
+- aid: reachware-inc:reachware-inc-cards-api
+  name: Reachware Inc. Cards API
+  description: Card save / tokenization flows
+  humanURL: https://docs.reachware.com
+  baseURL: https://api.reachware.com
+  tags:
+  - Cards
+  properties:
+  - type: OpenAPI
+    url: openapi/reachware-inc-cards-api-openapi.yml
+  - type: Documentation
+    url: https://docs.reachware.com
+  - type: GettingStarted
+    url: https://docs.reachware.com/docs/getting-started.md
+  - type: APIReference
+    url: https://docs.reachware.com/reference/reach-pay-checkout.md
+- aid: reachware-inc:reachware-inc-payments-api
+  name: Reachware Inc. Payments API
+  description: Request payments, retrieve payment details, and refunds
+  humanURL: https://docs.reachware.com
+  baseURL: https://api.reachware.com
+  tags:
+  - Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/reachware-inc-payments-api-openapi.yml
+  - type: Documentation
+    url: https://docs.reachware.com
+  - type: GettingStarted
+    url: https://docs.reachware.com/docs/getting-started.md
+  - type: APIReference
+    url: https://docs.reachware.com/reference/reach-pay-checkout.md
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: OpenAPI
+  url: openapi/reachware-inc-reachpay-openapi.yml
+- type: Overlay
+  url: overlays/reachware-inc-reachpay-overlay.yaml
+- type: Authentication
+  url: authentication/reachware-inc-authentication.yml
+- type: DomainSecurity
+  url: security/reachware-inc-domain-security.yml
+- type: MCPServer
+  url: mcp/reachware-inc-mcp.yml
+- type: ErrorCatalog
+  url: errors/reachware-inc-problem-types.yml
+- type: Conventions
+  url: conventions/reachware-inc-conventions.yml
+- type: DataModel
+  url: data-model/reachware-inc-data-model.yml
+- type: Sandbox
+  url: sandbox/reachware-inc-sandbox.yml
+- type: Conformance
+  url: conformance/reachware-inc-conformance.yml
+- type: Compliance
+  url: conformance/reachware-inc-conformance.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/reachware-inc-llms.txt
+- type: DeveloperPortal
+  url: https://docs.reachware.com
+- type: Documentation
+  url: https://docs.reachware.com
+- type: APIReference
+  url: https://docs.reachware.com/reference/reach-pay-checkout.md
+- type: GettingStarted
+  url: https://docs.reachware.com/docs/getting-started.md
+- type: Support
+  url: mailto:support@reachware.com
+- type: Login
+  url: https://app.reachware.com/
+- type: TermsOfService
+  url: https://reachware.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://reachware.com/privacy-policy
 - type: Website
   url: https://reachware.com
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1

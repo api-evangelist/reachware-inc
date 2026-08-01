@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/reachware-inc-reachpay-openapi.yml
+entities:
+  - name: Payment
+    id_fields: [payment_id, transaction_id, gateway_payment_id]
+    fields: [client_id, order_id, amount, status, source, payment_option, card_mask, message]
+    operations:
+      - openapi/reachware-inc-reachpay-openapi.yml#requestPayment
+      - openapi/reachware-inc-reachpay-openapi.yml#getPaymentDetails
+  - name: Refund
+    id_fields: [transaction_id]
+    fields: [amount, fee, currency, refunded, status]
+    operations:
+      - openapi/reachware-inc-reachpay-openapi.yml#refundPayment
+  - name: Card
+    id_fields: [card_token, request_id]
+    fields: [card_mask, card_save]
+    operations:
+      - openapi/reachware-inc-reachpay-openapi.yml#requestSaveCard
+  - name: Client
+    id_fields: [client_id]
+    notes: Merchant/client account; scopes all operations.
+relationships:
+  - from: Refund
+    to: Payment
+    type: belongs_to
+    via: gateway_payment_id
+  - from: Payment
+    to: Client
+    type: belongs_to
+    via: client_id
+  - from: Card
+    to: Client
+    type: belongs_to
+    via: client_id
+  - from: Payment
+    to: Card
+    type: has_one
+    via: card_token

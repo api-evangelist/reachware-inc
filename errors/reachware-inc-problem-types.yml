@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/reachware-inc-reachpay-openapi.yml
+format: custom
+notes: >-
+  Reach Pay returns a flat JSON error envelope (error/message, or type/message),
+  not RFC 9457 application/problem+json. Derived from the documented 4xx/5xx
+  responses in the Reach Pay API reference.
+envelope:
+  fields: [error, message, type, body]
+problems:
+  - status: 400
+    title: Bad request
+    detail: Required parameter missing (e.g. return_url is missing)
+    source_operations:
+      - openapi/reachware-inc-reachpay-openapi.yml#requestPayment
+      - openapi/reachware-inc-reachpay-openapi.yml#requestSaveCard
+  - status: 404
+    title: Config not found
+    detail: Config not found for the provided client/config id
+    source_operations:
+      - openapi/reachware-inc-reachpay-openapi.yml#requestPayment
+      - openapi/reachware-inc-reachpay-openapi.yml#getPaymentDetails
+      - openapi/reachware-inc-reachpay-openapi.yml#requestSaveCard
+  - status: 404
+    type: record_not_found
+    title: Payment record not found
+    detail: The payment record you were looking for was not found
+    source_operations:
+      - openapi/reachware-inc-reachpay-openapi.yml#refundPayment
+  - status: 404
+    type: invalid_request_error
+    title: Refund not permitted
+    detail: A refunded payment can't be refunded
+    source_operations:
+      - openapi/reachware-inc-reachpay-openapi.yml#refundPayment
+  - status: 500
+    title: Server error
+    detail: e.g. payment submitted before
+    source_operations:
+      - openapi/reachware-inc-reachpay-openapi.yml#requestPayment

@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.reachware.com + https://reachware.com
+standards:
+  - id: pci-dss
+    conforms: true
+    evidence: >-
+      Reach Pay docs state it does not store any card information and maintains
+      PCI compliance; card data is handled on the gateway's hosted pages.
+  - id: cmmi-level-3
+    conforms: true
+    evidence: Reachware states it is CMMI Level 3 certified (reachware.com).
+  - id: http-bearer-auth
+    conforms: true
+    evidence: OpenAPI securityScheme type http, scheme bearer.
+  - id: oauth2
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      Errors use a flat JSON envelope (error/message, type/message), not
+      application/problem+json.

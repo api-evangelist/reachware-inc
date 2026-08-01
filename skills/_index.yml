@@ -1,0 +1,12 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/reachware-inc-reachpay-openapi.yml
+skills:
+  - file: reachware-inc-accept-a-payment.md
+    name: Accept a payment with Reach Pay
+    api: openapi/reachware-inc-reachpay-openapi.yml
+    operations: [requestPayment, getPaymentDetails]
+  - file: reachware-inc-refund-a-payment.md
+    name: Refund a Reach Pay payment
+    api: openapi/reachware-inc-reachpay-openapi.yml
+    operations: [getPaymentDetails, refundPayment]

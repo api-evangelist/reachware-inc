@@ -1,0 +1,13 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/reachware-inc-reachpay-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: 'Merchant API token: Authorization: Bearer {reachToken}'
+  sources:
+  - openapi/reachware-inc-reachpay-openapi.yml

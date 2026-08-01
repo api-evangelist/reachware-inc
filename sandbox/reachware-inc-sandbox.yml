@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.reachware.com/docs/getting-started.md
+test_vs_live:
+  sandbox_base_url: https://api.reachware.com
+  production_base_url: provided after successful integration and verification
+  notes: >-
+    Reach Pay separates a sandbox (testing) phase from production. Merchants get
+    a sandbox account and Partner Portal credentials/tokens; production access
+    (and the production base URL) is granted after integration is verified.
+test_values:
+  published: false
+  notes: >-
+    No specific test card numbers, test tokens, or magic test identifiers are
+    published in the Reach Pay documentation. Values not fabricated.
+default_examples:
+  client_id: clientTest
+  request_id: '100'
+  notes: >-
+    Example/default values that appear in the published Reach Pay API reference
+    request bodies (Refund and Save Card use client_id default "clientTest",
+    Save Card uses request_id default "100").

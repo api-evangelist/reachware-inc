@@ -1,0 +1,12 @@
+# Reach Pay Documentation
+
+> Documentation for Reach Pay
+
+## Guides
+- [Getting Started with Reach Pay APIs](https://docs.reachware.com/docs/getting-started.md): "Welcome to the Reach Pay API Explorer!"
+
+## API Reference
+- [Request Payment](https://docs.reachware.com/reference/reach-pay-checkout.md): "This documentation provides detailed information about the Reach Pay API, focusing on the checkout process. It covers the API endpoint, request and response structures."
+- [Payment Details](https://docs.reachware.com/reference/payment-details.md): "This section of the Reach Pay API documentation details how to retrieve payment information using the Payment Details endpoint. It includes instructions on making a GET request with the required headers."
+- [Refund](https://docs.reachware.com/reference/refund.md): "This section of the Reach Pay API documentation details how to refund all or part of a previously captured payment."
+- [Save Cards](https://docs.reachware.com/reference/save-card.md)

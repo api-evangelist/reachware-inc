@@ -85,7 +85,7 @@ maintainers:
   email: info@apis.io
 common:
 - type: OpenAPI
-  url: openapi/reachware-inc-reachpay-openapi.yml
+  url: openapi/_original/reachware-inc-reachpay-openapi.yml
 - type: Overlay
   url: overlays/reachware-inc-reachpay-overlay.yaml
 - type: Authentication

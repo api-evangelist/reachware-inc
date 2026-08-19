@@ -2,23 +2,27 @@ generated: '2026-07-20'
 method: derived
 status: candidate
 source: openapi/reachware-inc-reachpay-openapi.yml
-notes: >-
-  No official hosted/remote MCP server was found for Reachware / Reach Pay.
-  This is a candidate tool list derived one-per-operation from the documented
-  Reach Pay API, not a published server.
+notes: No official hosted/remote MCP server was found for Reachware / Reach Pay. This is a candidate tool
+  list derived one-per-operation from the documented Reach Pay API, not a published server.
 server:
   name: reach-pay
   transport: http
 tools:
-  - name: request_payment
-    description: Initiate a payment and get a hosted payment gateway URL
-    source_operation: openapi/reachware-inc-reachpay-openapi.yml#requestPayment
-  - name: get_payment_details
-    description: Retrieve details and status of a payment transaction
-    source_operation: openapi/reachware-inc-reachpay-openapi.yml#getPaymentDetails
-  - name: refund_payment
-    description: Refund all or part of a captured payment
-    source_operation: openapi/reachware-inc-reachpay-openapi.yml#refundPayment
-  - name: request_save_card
-    description: Start a card save (tokenization) flow and get a hosted card registration URL
-    source_operation: openapi/reachware-inc-reachpay-openapi.yml#requestSaveCard
+- name: request_payment
+  description: Initiate a payment and get a hosted payment gateway URL
+  source_operation: openapi/reachware-inc-reachpay-openapi.yml#requestPayment
+- name: get_payment_details
+  description: Retrieve details and status of a payment transaction
+  source_operation: openapi/reachware-inc-reachpay-openapi.yml#getPaymentDetails
+- name: refund_payment
+  description: Refund all or part of a captured payment
+  source_operation: openapi/reachware-inc-reachpay-openapi.yml#refundPayment
+- name: request_save_card
+  description: Start a card save (tokenization) flow and get a hosted card registration URL
+  source_operation: openapi/reachware-inc-reachpay-openapi.yml#requestSaveCard
+deployment:
+  mode: none
+  verified: derived
+  tools: 4
+  checked: '2026-08-12'
+  source: catalog MCP census

@@ -1,0 +1,610 @@
+{
+  "item": [
+    {
+      "id": "4717b3bb-5d73-41a3-83fb-be381a2be95f",
+      "name": "Payments",
+      "description": {
+        "content": "Request payments, retrieve payment details, and refunds",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4c878c46-d390-4a32-a225-6968fda23613",
+          "name": "Request Payment",
+          "request": {
+            "name": "Request Payment",
+            "description": {
+              "content": "Initiate a payment and receive a hosted payment gateway URL to redirect the payer to for completing the checkout.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pay",
+                "RequestPayment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"client_id\": \"<string>\",\n  \"order_id\": \"<string>\",\n  \"payment_id\": \"<string>\",\n  \"amount\": \"<float>\",\n  \"return_url\": \"<uri>\",\n  \"location_id\": \"<string>\",\n  \"card_token\": \"<string>\",\n  \"redirect_url\": \"<uri>\",\n  \"lang\": \"<string>\",\n  \"card_save\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "fc4e1994-ca5c-4964-9e88-ba51f0dbfbfd",
+              "name": "Payment initiated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "RequestPayment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"order_id\": \"<string>\",\n  \"payment_id\": \"<string>\",\n  \"amount\": \"<float>\",\n  \"return_url\": \"<uri>\",\n  \"location_id\": \"<string>\",\n  \"card_token\": \"<string>\",\n  \"redirect_url\": \"<uri>\",\n  \"lang\": \"<string>\",\n  \"card_save\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"payment_id\": \"string\",\n  \"payment_gateway_url\": \"http://FBUhniu.spwkj240iJpybZetjIQd0MiQigSFF5bYFpi1ErAszUFg7IbNrcBgip9Y7YoFSv\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7d93e7f7-cb69-4ae1-93b0-606037428e79",
+              "name": "Bad request (e.g. return_url missing)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "RequestPayment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"order_id\": \"<string>\",\n  \"payment_id\": \"<string>\",\n  \"amount\": \"<float>\",\n  \"return_url\": \"<uri>\",\n  \"location_id\": \"<string>\",\n  \"card_token\": \"<string>\",\n  \"redirect_url\": \"<uri>\",\n  \"lang\": \"<string>\",\n  \"card_save\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": true,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8ea63e7b-b40a-4713-b752-53c2fbb19289",
+              "name": "Config not found for id",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "RequestPayment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"order_id\": \"<string>\",\n  \"payment_id\": \"<string>\",\n  \"amount\": \"<float>\",\n  \"return_url\": \"<uri>\",\n  \"location_id\": \"<string>\",\n  \"card_token\": \"<string>\",\n  \"redirect_url\": \"<uri>\",\n  \"lang\": \"<string>\",\n  \"card_save\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": true,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "44490681-c4a7-45ee-afe7-945fee1ae326",
+              "name": "Server error (e.g. payment submitted before)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "RequestPayment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"order_id\": \"<string>\",\n  \"payment_id\": \"<string>\",\n  \"amount\": \"<float>\",\n  \"return_url\": \"<uri>\",\n  \"location_id\": \"<string>\",\n  \"card_token\": \"<string>\",\n  \"redirect_url\": \"<uri>\",\n  \"lang\": \"<string>\",\n  \"card_save\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"body\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ae54b4a4-f6ef-48e9-ace2-8e1e2c3b17c7",
+          "name": "Payment Details",
+          "request": {
+            "name": "Payment Details",
+            "description": {
+              "content": "Retrieve the details and status of a payment transaction.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pay",
+                "PaymentDetails"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "gateway_payment_id",
+                  "value": "<string>",
+                  "description": "(Required) Unique identifier of the payment transaction provided by the payment gateway"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Unique identifier of the client making the request",
+                "key": "client_id",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "99f6ef09-ea03-4518-b2d8-a4a17c7e557b",
+              "name": "Payment details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "PaymentDetails"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "gateway_payment_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Unique identifier of the client making the request",
+                    "key": "client_id",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"client_id\": \"string\",\n  \"transaction_id\": \"string\",\n  \"amount\": \"string\",\n  \"message\": \"string\",\n  \"status\": 7967,\n  \"source\": \"string\",\n  \"card_save\": true,\n  \"payment_option\": \"string\",\n  \"card_mask\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "60b89027-2580-4f74-bc81-3370546507a5",
+              "name": "Config not found for id",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "PaymentDetails"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "gateway_payment_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Unique identifier of the client making the request",
+                    "key": "client_id",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": true,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "859ae4d5-030c-4cc0-987d-4e55549072ab",
+          "name": "Refund",
+          "request": {
+            "name": "Refund",
+            "description": {
+              "content": "Refund all or part of a previously captured payment.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pay",
+                "Refund"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"client_id\": \"<string>\",\n  \"amount\": \"<number>\",\n  \"gateway_payment_id\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "891f6d36-71e7-41f4-877b-fcc4a1cccb6b",
+              "name": "Refund processed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "Refund"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"amount\": \"<number>\",\n  \"gateway_payment_id\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"transaction_id\": \"string\",\n  \"status\": 3336,\n  \"amount\": 4039,\n  \"fee\": 5615,\n  \"currency\": \"string\",\n  \"refunded\": 4796\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bd657969-197d-4b53-9b59-c7e095c9ba98",
+              "name": "Record not found or refund not permitted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "Refund"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"amount\": \"<number>\",\n  \"gateway_payment_id\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"record_not_found\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.reachware.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d858042a-d539-45e5-b92f-15fd93597642",
+    "name": "Reach Pay Cards Payments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Reach Pay is Reachware's payment API for Saudi Arabia payment gateways. It provides a hosted checkout (Request Payment), payment status retrieval (Payment Details), refunds, and card-save (tokenization) flows. Reach Pay does not store card information; sensitive card data is handled by the underlying payment gateway. This specification was generated by the API Evangelist enrichment pipeline from Reach Pay's published API reference at https://docs.reachware.com — it captures the documented operations, request and response fields verbatim; it is not the provider's own machine-readable spec.\n\nContact Support:\n Name: Reach Pay Support\n Email: support@reachware.com",
+      "type": "text/plain"
+    }
+  }
+}

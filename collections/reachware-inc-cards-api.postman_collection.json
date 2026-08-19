@@ -1,0 +1,246 @@
+{
+  "item": [
+    {
+      "id": "a54440e7-130d-4bd3-9f48-786040ded02c",
+      "name": "Cards",
+      "description": {
+        "content": "Card save / tokenization flows",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "86a24b25-2c1c-4bc6-a5b2-c8cd11e8ebbb",
+          "name": "Save Cards",
+          "request": {
+            "name": "Save Cards",
+            "description": {
+              "content": "Start a card save (tokenization) flow and receive a hosted card registration URL to redirect the payer to.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pay",
+                "RequestSaveCard"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"client_id\": \"<string>\",\n  \"request_id\": \"<string>\",\n  \"return_url\": \"<uri>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "510df859-ff50-48ca-a162-dffd68320669",
+              "name": "Card save flow initiated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "RequestSaveCard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"request_id\": \"<string>\",\n  \"return_url\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"request_id\": \"string\",\n  \"card_gateway_url\": \"https://qk.qlqsUaPm4ewGqHZIBavjA9OFX0dlm+-qKxE9KwRMa-fvvjckgb4Vb-kQ-MDXWEXXWc7wUjiH\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "67169f73-b515-4f15-95f2-5184719b4d13",
+              "name": "Bad request (e.g. return_url missing)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "RequestSaveCard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"request_id\": \"<string>\",\n  \"return_url\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": false,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3a7baa17-ad52-4add-9548-7f92f652211e",
+              "name": "Config not found for client id",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pay",
+                    "RequestSaveCard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"request_id\": \"<string>\",\n  \"return_url\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": false,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.reachware.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f32a6b7b-d7bf-4f2e-930b-94e137adef05",
+    "name": "Reach Pay Cards API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Reach Pay is Reachware's payment API for Saudi Arabia payment gateways. It provides a hosted checkout (Request Payment), payment status retrieval (Payment Details), refunds, and card-save (tokenization) flows. Reach Pay does not store card information; sensitive card data is handled by the underlying payment gateway. This specification was generated by the API Evangelist enrichment pipeline from Reach Pay's published API reference at https://docs.reachware.com — it captures the documented operations, request and response fields verbatim; it is not the provider's own machine-readable spec.\n\nContact Support:\n Name: Reach Pay Support\n Email: support@reachware.com",
+      "type": "text/plain"
+    }
+  }
+}

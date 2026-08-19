@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Reach Pay Cards Payments API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Payments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Request Payment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.reachware.com/pay/RequestPayment",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Initiate a payment and receive a hosted payment gateway URL to redirect the payer to for completing the checkout."
+        },
+        {
+          "info": {
+            "name": "Payment Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.reachware.com/pay/PaymentDetails",
+            "headers": [
+              {
+                "name": "client_id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "gateway_payment_id",
+                "value": "",
+                "type": "query",
+                "description": "Unique identifier of the payment transaction provided by the payment gateway"
+              }
+            ]
+          },
+          "docs": "Retrieve the details and status of a payment transaction."
+        },
+        {
+          "info": {
+            "name": "Refund",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.reachware.com/pay/Refund",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Refund all or part of a previously captured payment."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

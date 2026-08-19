@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Reach Pay Cards API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Save Cards",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.reachware.com/pay/RequestSaveCard",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start a card save (tokenization) flow and receive a hosted card registration URL to redirect the payer to."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

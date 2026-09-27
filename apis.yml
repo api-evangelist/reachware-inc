@@ -26,7 +26,7 @@ accessModel:
   generated: '2026-09-03'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/reachware-inc.png
-name: Reachware Inc.
+name: Reachware
 description: >-
   Reachware is an Integration Platform as a Service (iPaaS) that lets separate
   SaaS and business systems operate as one connected ecosystem, with 200+
@@ -148,3 +148,4 @@ x-enrichment:
   status: enriched
   artifacts_added: 14
   pass: local-v1
+x-legal-name: Reachware Inc.

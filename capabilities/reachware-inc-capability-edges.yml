@@ -1,0 +1,26 @@
+slug: reachware-inc
+provider: Reachware
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Payments
+  spec_file: reachware-inc-payments-api-openapi.yml
+  capability_id: BC-4250.40
+  capability_id_l1: BC-4250
+  capability_name: Payment Collection & Dunning
+  confidence: 0.7
+  evidence: POST /pay/RequestPayment  Request Payment; GET /pay/PaymentDetails  Payment Details; POST
+    /pay/Refund  Refund
+  reason: Operations authorise, inspect and refund payments through payment gateways — payment authorisation
+    and collection. Mapped to the collection sub-capability as the nearest fit; moderate confidence since
+    this is a general-purpose payment gateway wrapper, not specifically recurring-revenue collection.

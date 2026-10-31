@@ -1,4 +1,4 @@
-# Reachware Inc.
+# Reachware
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,110 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Reachware Inc. is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Reachware is an Integration Platform as a Service (iPaaS) that lets separate SaaS and business systems operate as one connected ecosystem, with 200+ prebuilt connectors to systems like NetSuite, QuickBooks, Microsoft Dynamics 365, Odoo, SAP, Oracle, Magento, Zid and Qoyod. Alongside the core platform it ships Reach Pay (a payment API for Saudi Arabia payment gateways), Reachware Fatoora (ZATCA e-invoicing), and extension modules for banking, HR, inventory, loyalty and property management. Reach Pay exposes a hosted-redirect REST API for requesting payments, retrieving payment details, refunds and card tokenization. Reachware reports 3,500+ active subscriptions, 300+ customers, 100M+ transactions, and is CMMI Level 3 certified. It was surfaced as a portfolio company of 500 Global and profiled by the API Evangelist enrichment pipeline.
 
-Backed by: 500-global — https://reachware.com
+**Areas:** Company · Payments · iPaaS · Integration · Fintech · Payment Gateway · Tokenization · Saudi Arabia
+
+## Reachware on APIs.io
+
+Everything profiled for Reachware is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/reachware-inc/](https://apis.io/providers/reachware-inc/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Reachware Inc. Cards API](https://apis.io/apis/reachware-inc/reachware-inc-cards-api/) — Card save / tokenization flows
+- [Reachware Inc. Payments API](https://apis.io/apis/reachware-inc/reachware-inc-payments-api/) — Request payments, retrieve payment details, and refunds
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [reach-pay](https://apis.io/servers/reachware-inc/reach-pay/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [Reach Pay Cards API](https://apis.io/collections/reachware-inc/open-reachware-inc-cards-api/)
+- [Reach Pay Cards Payments API](https://apis.io/collections/reachware-inc/open-reachware-inc-payments-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Reachware Inc Reachpay Overlay](https://apis.io/overlays/reachware-inc/reachware-inc-reachpay-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Reachware Inc Authentication](https://apis.io/security/reachware-inc/reachware-inc-authentication/)
+- [Reachware Inc Domain Security](https://apis.io/security/reachware-inc/reachware-inc-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://reachware.com)
+- [Documentation](https://docs.reachware.com)
+- [Getting started](https://docs.reachware.com/docs/getting-started.md)
+- [API reference](https://docs.reachware.com/reference/reach-pay-checkout.md)
+- [Blog](https://reachware.com/blog)
+- [Terms of service](https://reachware.com/terms-of-service)
+- [Privacy policy](https://reachware.com/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 37.4** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 50.2 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 47.0 |
+| Access clarity | 25.0 |
+
+**Agent readiness 23.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 30.4** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/reachware-inc/](https://apis.io/providers/reachware-inc/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Reachware: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/reachware-inc/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
